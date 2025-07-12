@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
   }
 
   const ytdlpArgs = format === 'mp3'
-    ? ['-x', '--audio-format', 'mp3', '-o', '-', videoUrl]
-    : ['-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '-o', '-', videoUrl];
+  ? ['--cookies', 'cookies.txt', '-x', '--audio-format', 'mp3', '-o', '-', videoUrl]
+  : ['--cookies', 'cookies.txt', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '-o', '-', videoUrl];
 
   if (format === 'mp3') {
     res.setHeader('Content-Type', 'audio/mpeg');
