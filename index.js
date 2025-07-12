@@ -7,6 +7,10 @@ const port  = process.env.PORT || 5000;
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send("YouTube Downloader Backend is Running.");
+});
+
 app.get('/download', (req, res) => {
   const videoUrl = req.query.url;
   const format = req.query.format || 'mp4';
