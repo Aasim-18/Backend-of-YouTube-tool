@@ -3,7 +3,7 @@ import cors from 'cors';
 import  { spawn } from 'child_process';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port  = process.env.PORT || 5000;
 
 app.use(cors());
 
@@ -60,6 +60,6 @@ app.get('/download', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
