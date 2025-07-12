@@ -1,0 +1,8 @@
+.env
+node_modules
+.gitconfig
+.npmrc
+.ssh
+.npm
+.config/termux
+.cache/pip/http-v2
